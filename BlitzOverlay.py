@@ -10,8 +10,6 @@ import os
 from time import sleep
 from tkinter import *
 import tkinter
-from random import randint as rint
-a = 15
 
 def cls():
     os.system('cls||clear')
@@ -27,7 +25,11 @@ def get_id(nickname):
         cls()
         print("Аккаунт не найден, попробуйте снова ")
         id = get_id(input("Введите свой никнейм: "))
-
+    except KeyError:
+        cls()
+        print("Ошибка ввода, попробуйте снова ")
+        id = get_id(input("Введите свой никнейм: "))
+        
     return id
 
 id = get_id(input("Введите свой никнейм: "))
