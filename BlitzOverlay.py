@@ -58,9 +58,11 @@ lbl = Label()
 lbl.grid(column=0, row=0)  
 
 def overlay():
+    global refresh 
     lbl.configure(text=f'Процент побед: {req()}%', font=("Impact", 50), fg='#008080')
     if True:
-        WoTBO.after(120000, overlay)
+        WoTBO.after(refresh, overlay)
 
+refresh = int(input("Введите время обновления статистики (в секундах): "))*1000
 overlay()
 WoTBO.mainloop()
