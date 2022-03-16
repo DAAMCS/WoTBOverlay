@@ -3,4 +3,4 @@ Hello, this repository will help show different stats in WoT Blitz. So far, it o
 ---
 Привет, этот репозиторий поможет показывать различную стаистику в WoT Blitz. Пока что он работает только для RU сегмента. В дальнейшем я добавлю возможность выбора региона и языка.
 
-#How to add WoTBOverlay in OBS - https://youtu.be/8CYzYG-Ve1U
+# How to add WoTBOverlay in OBS - https://youtu.be/8CYzYG-Ve1U
