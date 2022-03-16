@@ -58,8 +58,23 @@ lbl = Label()
 lbl.grid(column=0, row=0)  
 
 def overlay():
-    global refresh 
-    lbl.configure(text=f'Процент побед: {req()}%', font=("Impact", 50), fg='#008080')
+    global refresh
+    if req() > 49 and req() < 51: fgc = '#ADFF2F'
+    elif req() > 51 and req() < 53: fgc = '#32CD32'
+    elif req() > 53 and req() < 56: fgc = '#7FFFD4'
+    elif req() > 56 and req() < 60: fgc = '#00FFFF'
+    elif req() > 60 and req() < 64: fgc = '#7B68EE'
+    elif req() > 64: fgc = '#8B008B'
+    elif req() > 48 and req() < 49: fgc = '#FFFF00'
+    elif req() > 47 and req() < 48: fgc = '#FFD700'
+    elif req() > 46 and req() < 47: fgc = '#FFA500'
+    elif req() > 45 and req() < 46: fgc = '#FF8C00'
+    elif req() > 44 and req() < 45: fgc = '#FF4500'
+    elif req() > 43 and req() < 44: fgc = '#DC143C'
+    elif req() > 42 and req() < 43: fgc = '#FF0000' 
+    elif req() < 42: fgc = '#8B0000'
+
+    lbl.configure(text=f'Процент побед: {req()}%', font=("Impact", 50), fg=fgc)
     if True:
         WoTBO.after(refresh, overlay)
 
